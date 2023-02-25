@@ -1,3 +1,9 @@
+# https://www.serverless.com/plugins/serverless-python-requirements
+try:
+    import unzip_requirements  # pyright: reportMissingImports=false
+except ImportError:
+    pass
+
 import os
 from slack_bolt import App
 
