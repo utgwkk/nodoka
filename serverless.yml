@@ -33,6 +33,7 @@ package:
   patterns:
     - "!.venv/**"
     - "!.vscode/**"
+    - "!node_modules/**"
     - "!.env"
 
 plugins:
