@@ -4,6 +4,7 @@ try:
 except ImportError:
     pass
 
+import json
 import os
 from slack_bolt import App
 
@@ -30,7 +31,7 @@ def transfer_message(message, say):
     if "bot_id" in message:
         return
 
-    print(message)
+    print(json.dumps(message))
     message_url = build_message_url(message)
     say(message_url, channel=DESTINATION_CHANNEL_ID)
 
