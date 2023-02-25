@@ -35,8 +35,16 @@ package:
 
 plugins:
   - serverless-python-requirements
+  - serverless-domain-manager
 custom:
   pythonRequirements:
     pythonBin: .venv/bin/python
     zip: true
     slim: true
+  customDomain:	
+    domainName: nodoka.slackbot.utgw.net
+    certificateName: '*.slackbot.utgw.net'
+    basePath: ''
+    createRoute53Record: true
+    endpointType: regional
+    apiType: http
