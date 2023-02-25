@@ -25,10 +25,20 @@ def build_message_url(message) -> str:
     )
 
 
+def is_bot(message) -> bool:
+    if "bot_id" in message:
+        return True
+
+    if "message" in message:
+        return is_bot(message["message"])
+
+    return False
+
+
 @app.event("message")
 def transfer_message(message, say):
     # exclude bot
-    if "bot_id" in message:
+    if is_bot(message):
         return
 
     print(json.dumps(message))
