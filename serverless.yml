@@ -12,6 +12,8 @@ provider:
             - lambda:InvokeFunction
             - lambda:InvokeAsync
           Resource: "*"
+  httpApi:
+    disableDefaultEndpoint: true
   environment:
     SERVERLESS_STAGE: ${opt:stage, 'prod'}
     SLACK_SIGNING_SECRET: ${env:SLACK_SIGNING_SECRET}
