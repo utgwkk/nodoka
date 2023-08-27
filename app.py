@@ -1,6 +1,6 @@
 # https://www.serverless.com/plugins/serverless-python-requirements
 try:
-    import unzip_requirements  # pyright: reportMissingImports=false
+    import unzip_requirements  # pyright: ignore[reportMissingImports]
 except ImportError:
     pass
 
