@@ -2,7 +2,7 @@ frameworkVersion: '3'
 service: uzawa-transfer-message-to-channel
 provider:
   name: aws
-  runtime: python3.9
+  runtime: python3.11
   region: ap-northeast-1
   iam:
     role:
