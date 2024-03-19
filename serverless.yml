@@ -1,4 +1,5 @@
 frameworkVersion: "3"
+configValidationMode: error
 service: uzawa-transfer-message-to-channel
 provider:
   name: aws
